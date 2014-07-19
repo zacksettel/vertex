@@ -1,0 +1,15 @@
+#N canvas 15 49 200 200 10;
+#N canvas 352 271 420 300 META 0;
+#X text 10 6 META The pdsheefa library;
+#X text 10 25 NAME pdsheefa;
+#X text 10 44 AUTHOR Zack Settel and Mike Wozniewski;
+#X text 8 172 LICENSE GNU GPL;
+#X text 8 192 VERSION 0.4.2;
+#X text 10 64 DESCRIPTION The pdsheefa library contains an assortment
+of tools for show control \, audio rendering \, and the construction
+of networked installations and performance works. There are components
+for OpenSoundControl \, various sensors (InertiaCube \, MotionNode
+\, Wii Controller \, Ubisense \, etc) \, interfacing with the SPIN
+Framework (http://www.spinframework.org) \, and audio spatialization
+via SpatOSC (http://code.sat.qc.ca/trac/spatosc).;
+#X restore 10 10 pd META;

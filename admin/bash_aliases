@@ -1,0 +1,72 @@
+#add  this to .bashrc
+
+#if [ -d /usr -a -r ~/src/vertex/admin/bash_aliases ]; then
+#    source ~/src/vertex/admin/bash_aliases
+#fi
+
+MACHINE_NAME=`uname -n`
+OS=`uname -s` 
+OS_VER=`uname -r`
+MACHINE=`uname -m`
+
+
+
+
+
+THIS_DIR=~/src/vertex/admin
+
+PDSHEEFA=~/src/pdsheefa
+
+SSHKEYDIR=$THIS_DIR/ssh
+
+ZRCFILE=$THIS_DIR/bash_aliases
+
+alias cdsrc='cd ~/src'
+
+# aliases for directories:
+
+
+if [ -z "$SSH_AGENT_PID" ]; then
+    eval `ssh-agent`
+fi
+
+
+
+if [ -d /usr -a -r $SSHKEYDIR/id_vertex ]; then
+
+    key=`ssh-add -L | grep id_vertex`
+    if [ -z "$key" ] ; then
+        `chmod 600 $SSHKEYDIR/id_vertex`
+        `ssh-add -t 52w $SSHKEYDIR/id_vertex`
+    fi
+fi
+
+
+
+
+
+#---------  GIT STUFF  ----------------
+
+alias gpull='git pull origin'
+alias gpush='git push origin'
+alias gitreset='git reset --hard HEAD'
+
+
+
+#git commands
+alias githelp='open http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#resolving-a-merge'
+
+
+#project aliases
+alias cdvert='cd $THIS_DIR/..'
+
+
+#other
+
+alias latest='ls -lt | head'
+alias edit='leafpad'
+
+
+echo sourced $THIS_DIR/bash_aliases
+
+
