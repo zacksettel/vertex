@@ -64,7 +64,10 @@ alias cdvert='cd $THIS_DIR/..'
 #other
 
 alias latest='ls -lt | head'
-alias edit='leafpad'
+
+if [ $OS = 'Linux' ]; then
+	alias edit='leafpad'
+fi
 
 
 echo sourced $THIS_DIR/bash_aliases
