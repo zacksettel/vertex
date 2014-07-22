@@ -8,9 +8,8 @@ robotic audio display system
 team:
 
 P. Saint-Denis
-J. Piché
+J. Piche
 Z. Settel
-
 
 
 
