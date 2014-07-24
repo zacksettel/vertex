@@ -23,6 +23,13 @@ ZRCFILE=$THIS_DIR/bash_aliases
 
 alias cdsrc='cd ~/src'
 
+BOXDIR=~/boxSync
+
+
+alias cdbs="cd $BOXDIR"
+
+
+
 # aliases for directories:
 
 
