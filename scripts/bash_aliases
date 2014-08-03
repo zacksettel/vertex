@@ -1,8 +1,14 @@
 #add  this to .bashrc
 
-#if [ -d /usr -a -r ~/src/vertex/admin/bash_aliases ]; then
-#    source ~/src/vertex/admin/bash_aliases
+
+VERTEXDIR=~/src/vertex
+
+
+#if [ -d /usr -a -r ~/src/vertex/scripts/bash_aliases ]; then
+#    source ~/src/vertex/scripts/bash_aliases
 #fi
+
+
 
 MACHINE_NAME=`uname -n`
 OS=`uname -s` 
@@ -12,18 +18,26 @@ MACHINE=`uname -m`
 
 
 
-
 THIS_DIR=~/src/vertex/admin
 
-PDSHEEFA=~/src/pdsheefa
+#PDSHEEFA=~/src/pdsheefa
 
 SSHKEYDIR=$THIS_DIR/ssh
 
-ZRCFILE=$THIS_DIR/bash_aliases
+VRCFILE=$THIS_DIR/bash_aliases
 
 alias cdsrc='cd ~/src'
 
 BOXDIR=~/boxSync
+
+
+#echo VERTEX DIR: $VERTEXDIR
+
+
+PATH="${VERTEXDIR}/scripts:${PATH}"
+export PATH
+
+
 
 
 alias cdbs="cd $BOXDIR"
