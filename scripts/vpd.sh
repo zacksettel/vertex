@@ -21,6 +21,8 @@ PATCHES_PATH="$DIR_PATH/../puredata/patches:$BOXDIR/puredata/patches"
 EXTERNS_DIR="$DIR_PATH/../puredata/src/strang:$BOXDIR/puredata/src/strang"
 SOUND_PATH="$DIR_PATH/../sound:$BOXDIR/sound"
 
+PDMESSAGE="pd dsp 1"
+
 
 if [ "$OS" = "Darwin" ]; then
 
@@ -35,7 +37,6 @@ if [ "$OS" = "Darwin" ]; then
 
     echo using $PD
 
-    PDMESSAGE="pd dsp 1"
 
 else  #linux
 
