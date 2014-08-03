@@ -60,13 +60,13 @@ killall $PDEXEC
 
 if [ -z "$PDMESSAGE" ] ; then
 
-    echo "\n launching vpd on localhost: \n $PD  $PDFLAGS $PD_PATCHES"
+    echo "\n launching vpd on localhost: \n $PD  $PDFLAGS $PD_PATCHES $1 $2 $3 $4 $5"
 
     $PD  $PDFLAGS  $1 $2 $3 $4 $5 &
     #$PD  $PDFLAGS $PD_PATCHES &
 else
 
-    echo "\n launching vpd on localhost: \n $PD  -send $PDMESSAGE $PDFLAGS $PD_PATCHES"
+    echo "\n launching vpd on localhost: \n $PD  -send $PDMESSAGE $PDFLAGS $PD_PATCHES $1 $2 $3 $4 $5"
 
     $PD -send "$PDMESSAGE" $PDFLAGS $PD_PATCHES $1 $2 $3 $4 $5 &
 
