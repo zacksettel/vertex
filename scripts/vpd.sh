@@ -15,9 +15,11 @@ echo DIRPATH= $DIR_PATH
 #PD_PATCHES="test.pd"
 
 
-PATCHES_PATH="$DIR_PATH/../puredata/patches"
-EXTERNS_DIR="$DIR_PATH/../puredata/src/strang"
-SOUND_PATH="$DIR_PATH/../sound"
+BOXDIR=~/boxSync
+
+PATCHES_PATH="$DIR_PATH/../puredata/patches:$BOXDIR/puredata/patches"
+EXTERNS_DIR="$DIR_PATH/../puredata/src/strang:$BOXDIR/puredata/src/strang"
+SOUND_PATH="$DIR_PATH/../sound:$BOXDIR/sound"
 
 
 if [ "$OS" = "Darwin" ]; then
@@ -33,6 +35,8 @@ if [ "$OS" = "Darwin" ]; then
 
     echo using $PD
 
+    PDMESSAGE="pd dsp 1"
+
 else  #linux
 
     PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024 -nogui"
@@ -45,25 +49,26 @@ else  #linux
     echo using $PD
 fi
 
+
 #  add audio and any other pd command line flags here
 PDFLAGS=" $PD_AUDIO_FLAGS -path $PDSHEEFA_DIR:$PATCHES_PATH:$SOUND_PATH:$EXTERNS_DIR"
-
-
 
 
 killall $PDEXEC
 
 
 
-if [ -z $PDMESS ] ; then
+if [ -z "$PDMESSAGE" ] ; then
 
     echo "\n launching vpd on localhost: \n $PD  $PDFLAGS $PD_PATCHES"
 
-    $PD  $PDFLAGS  &
+    $PD  $PDFLAGS  $1 $2 $3 $4 $5 &
     #$PD  $PDFLAGS $PD_PATCHES &
 else
 
-    $PD -send "$PDMESS" $PDFLAGS $PD_PATCHES &
+    echo "\n launching vpd on localhost: \n $PD  -send $PDMESSAGE $PDFLAGS $PD_PATCHES"
+
+    $PD -send "$PDMESSAGE" $PDFLAGS $PD_PATCHES $1 $2 $3 $4 $5 &
 
 fi
 

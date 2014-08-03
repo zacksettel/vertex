@@ -31,9 +31,6 @@ alias cdsrc='cd ~/src'
 BOXDIR=~/boxSync
 
 
-#echo VERTEX DIR: $VERTEXDIR
-
-
 PATH="${VERTEXDIR}/scripts:${PATH}"
 export PATH
 
