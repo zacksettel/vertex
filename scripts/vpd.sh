@@ -35,7 +35,7 @@ if [ "$OS" = "Darwin" ]; then
 
 else  #linux
 
-    PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024"
+    PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024 -nogui"
 
     PDSHEEFA_DIR=/usr/local/lib/pd-externals/pdsheefa
 
