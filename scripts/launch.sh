@@ -27,7 +27,7 @@ PI_IP=pi@192.168.0.10
 
 if [ $PI_IP = localhost ] || [ $PI_IP = $MY_IP ] ; then
 
-    sh '~/src/vertex/scripts/vpd.sh karplus_strong.pd' &
+    sh '~/src/vertex/scripts/vpd.sh $1' &
 else
     #   launch Audio process on remote host
     echo ssh $PI_IP: sh '~/src/vertex/scripts/vpd.sh karplus_strong.pd'
