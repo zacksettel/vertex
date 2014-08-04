@@ -18,15 +18,12 @@ MACHINE=`uname -m`
 
 
 
-THIS_DIR=~/src/vertex/admin
+THIS_DIR=$VERTEXDIR/scripts
 
-#PDSHEEFA=~/src/pdsheefa
-
-SSHKEYDIR=$THIS_DIR/ssh
+SSHKEYDIR=$THIS_DIR/../admin/ssh
 
 VRCFILE=$THIS_DIR/bash_aliases
 
-alias cdsrc='cd ~/src'
 
 BOXDIR=~/boxSync
 
@@ -38,7 +35,7 @@ export PATH
 
 
 alias cdbs="cd $BOXDIR"
-
+alias cdsrc='cd ~/src'
 
 
 # aliases for directories:
@@ -76,7 +73,7 @@ alias githelp='open http://www.kernel.org/pub/software/scm/git/docs/user-manual.
 
 
 #project aliases
-alias cdvert='cd $THIS_DIR/..'
+alias cdv='cd $THIS_DIR/..'
 
 
 #other
