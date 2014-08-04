@@ -36,6 +36,7 @@ export PATH
 
 alias cdbs="cd $BOXDIR"
 alias cdsrc='cd ~/src'
+alias vup='cdv; gpull master; cd -'
 
 
 # aliases for directories:
