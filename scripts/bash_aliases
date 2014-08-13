@@ -9,6 +9,15 @@ VERTEXDIR=~/src/vertex
 #fi
 
 
+#add to .ssh/config file
+
+#Host pi
+#	Hostname 192.168.0.141
+#	Port 22
+#	User pi
+#	IdentityFile ~/src/vertex/admin/ssh/id_vertex
+
+
 
 MACHINE_NAME=`uname -n`
 OS=`uname -s` 
