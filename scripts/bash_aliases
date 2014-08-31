@@ -9,6 +9,15 @@ VERTEXDIR=~/src/vertex
 #fi
 
 
+#add to .ssh/config file
+
+#Host pi
+#	Hostname 192.168.0.141
+#	Port 22
+#	User pi
+#	IdentityFile ~/src/vertex/admin/ssh/id_vertex
+
+
 
 MACHINE_NAME=`uname -n`
 OS=`uname -s` 
@@ -42,10 +51,12 @@ alias vup='cdv; gpull master; cd -'
 # aliases for directories:
 
 
-if [ -z "$SSH_AGENT_PID" ]; then
-    eval `ssh-agent`
-fi
+if [ $OS = 'Linux' ]; then
 
+    if [ -z "$SSH_AGENT_PID" ]; then
+        eval `ssh-agent`
+    fi
+fi
 
 
 if [ -d /usr -a -r $SSHKEYDIR/id_vertex ]; then
@@ -74,7 +85,7 @@ alias githelp='open http://www.kernel.org/pub/software/scm/git/docs/user-manual.
 
 
 #project aliases
-alias cdv='cd $THIS_DIR/..'
+alias cdv='cd $VERTEXDIR'
 
 
 #other

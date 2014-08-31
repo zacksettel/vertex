@@ -23,16 +23,16 @@ DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #fi
 
 
-PI_IP=pi@192.168.0.10
+PI_IP=pi@192.168.0.141
 
 if [ $PI_IP = localhost ] || [ $PI_IP = $MY_IP ] ; then
 
-    sh '~/src/vertex/scripts/vpd.sh $1' &
+    sh '~/src/vertex/scripts/vpd.sh' $1 &
 else
     #   launch Audio process on remote host
-    echo ssh $PI_IP: sh '~/src/vertex/scripts/vpd.sh karplus_strong.pd'
+    echo ssh $PI_IP: sh '~/src/vertex/scripts/vpd.sh' $1
     #
-    ssh $PI_IP sh '~/src/vertex/scripts/vpd.sh karplus_strong.pd' &
+    ssh $PI_IP sh '~/src/vertex/scripts/vpd.sh' $1 &
 fi
 
 
