@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-source ./pdDefs.sh
+source $DIR_PATH/pdDefs.sh
 
 
 #  add audio and any other pd command line flags here

@@ -33,10 +33,10 @@ if [ $PI_IP = localhost ] || [ $PI_IP = $MY_IP ] ; then
     sh '~/src/vertex/scripts/vpd.sh' $1 &
 else
     #   launch Audio process on remote host
-    echo ssh  $PI_IP: sh '~/src/vertex/scripts/vpd.sh' $1
+    echo ssh  $PI_IP sh '~/src/vertex/scripts/vpd.sh' $1
     #
 
-   ssh  $PI_IP sh '~/src/vertex/scripts/vpd.sh' $1 &
+   ssh  $PI_IP sh '/home/pi/src/vertex/scripts/vpd.sh' $1 &
 fi
 
 
