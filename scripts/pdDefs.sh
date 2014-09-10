@@ -7,7 +7,7 @@ OS=`uname -s`
 
 # this file should be ~/src/vertex/scripts
 
-DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo DIRPATH= $DIR_PATH
 
 
@@ -16,35 +16,35 @@ echo DIRPATH= $DIR_PATH
 
 BOXDIR=~/boxSync
 
-PATCHES_PATH="$DIR_PATH/../puredata/patches:$BOXDIR/puredata/patches"
-EXTERNS_DIR="$DIR_PATH/../puredata/src/strang:$BOXDIR/puredata/src/strang"
-SOUND_PATH="$DIR_PATH/../sound:$BOXDIR/sound"
+export PATCHES_PATH="$DIR_PATH/../puredata/patches:$BOXDIR/puredata/patches"
+export EXTERNS_DIR="$DIR_PATH/../puredata/src/strang:$BOXDIR/puredata/src/strang"
+export SOUND_PATH="$DIR_PATH/../sound:$BOXDIR/sound"
 
-PDMESSAGE="pd dsp 1"
+export PDMESSAGE="pd dsp 1"
 
 
 if [ "$OS" = "Darwin" ]; then
 
 
-    #PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024"
+    export PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024"
 
-    PDSHEEFA_DIR="~/Library/Pd/pdsheefa"
+    ex[prt PDSHEEFA_DIR="~/Library/Pd/pdsheefa"
 
     PD=/Applications/Pd-extended.app/Contents/Resources/bin/pd
 
-    PDEXEC="Pd-extended"
+    export PDEXEC="Pd-extended"
 
     echo using $PD
 
 
 else  #linux
 
-    PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024 -nogui"
+    export PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024 -nogui"
 
-    PDSHEEFA_DIR=/usr/local/lib/pd-externals/pdsheefa
+    export PDSHEEFA_DIR=/usr/local/lib/pd-externals/pdsheefa
 
     PD=pdextended
-    PDEXEC="pdextended"
+    export PDEXEC="pdextended"
 
     echo using $PD
 fi
