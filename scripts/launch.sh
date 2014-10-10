@@ -23,7 +23,7 @@ DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #fi
 
 
-PI_IP=pi@192.168.0.10
+PI_IP=pi@192.168.0.141
 
 if [ $PI_IP = localhost ] || [ $PI_IP = $MY_IP ] ; then
 
