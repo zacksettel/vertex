@@ -12,7 +12,8 @@ VERTEXDIR=~/src/vertex
 #add to .ssh/config file
 
 #Host pi
-#	Hostname 192.168.0.141
+#   for z lab
+#	Hostname 192.168.0.122
 #	Port 22
 #	User pi
 #	IdentityFile ~/src/vertex/admin/ssh/id_vertex
