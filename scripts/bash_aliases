@@ -87,6 +87,8 @@ alias githelp='open http://www.kernel.org/pub/software/scm/git/docs/user-manual.
 
 #project aliases
 alias cdv='cd $VERTEXDIR'
+alias pdr='ssh -Y pi pdextended'
+#alias kpdr='ssh pi killall pdextended'
 
 
 #other
