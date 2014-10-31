@@ -3,11 +3,9 @@
 
 OS=`uname -s`
 
-
-
 # this file should be ~/src/vertex/scripts
 
-export DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export DIR_PATH="/home/pi/src/vertex/scripts"
 echo DIRPATH= $DIR_PATH
 
 
