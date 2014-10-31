@@ -28,7 +28,7 @@ if [ "$OS" = "Darwin" ]; then
 
     export PD_AUDIO_FLAGS=" -r 44100 -blocksize 1024"
 
-    ex[prt PDSHEEFA_DIR="~/Library/Pd/pdsheefa"
+    export PDSHEEFA_DIR="~/Library/Pd/pdsheefa"
 
     PD=/Applications/Pd-extended.app/Contents/Resources/bin/pd
 
