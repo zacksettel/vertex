@@ -47,6 +47,7 @@ export PATH
 alias cdbs="cd $BOXDIR"
 alias cdsrc='cd ~/src'
 alias vup='cdv; gpull master; cd -'
+alias vpd='ssh -Y pi pd-extended /home/pi/boxSync/puredata/patches/'
 
 
 # aliases for directories:
@@ -88,6 +89,7 @@ alias githelp='open http://www.kernel.org/pub/software/scm/git/docs/user-manual.
 #project aliases
 alias cdv='cd $VERTEXDIR'
 alias pdr='ssh -Y pi pdextended'
+alias cdb='cd ~/boxSync'
 #alias kpdr='ssh pi killall pdextended'
 
 
