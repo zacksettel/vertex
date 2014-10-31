@@ -1,12 +1,11 @@
 #!/bin/bash
 
-DIR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR_PATH=/home/pi/src/vertex/scripts
 echo DIRPATH= $DIR_PATH
 
 source $DIR_PATH/pdDefs.sh
 
 
-exit
 
 #  add audio and any other pd command line flags here
 PDFLAGS=" $PD_AUDIO_FLAGS -path $PDSHEEFA_DIR:$PATCHES_PATH:$SOUND_PATH:$EXTERNS_DIR"
