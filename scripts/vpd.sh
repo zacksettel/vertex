@@ -16,7 +16,7 @@ OS=`uname -s`
 #PD_PATCHES="test.pd"
 
 
-BOXDIR=~/boxSync
+BOXDIR=~/boxSync/vertex
 
  PATCHES_PATH="$DIR_PATH/../puredata/patches:$BOXDIR/puredata/patches"
  EXTERNS_DIR="$DIR_PATH/../puredata/src/strang:$BOXDIR/puredata/src/strang"
